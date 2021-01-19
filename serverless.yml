@@ -1,0 +1,15 @@
+service: users
+
+provider: 
+  name: aws
+
+functions:
+  usersCreate:
+    handler: functions/usersCreate.handler
+    events:
+      - http: post users
+  usersDelete:
+    handler: functions/usersDelete.handler
+    events:
+      - http: delete users
+  
